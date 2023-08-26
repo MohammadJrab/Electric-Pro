@@ -1,0 +1,326 @@
+﻿<Page x:Class="ElectricPro.View.On_Off.on_off"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ElectricPro.View.On_Off"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:wpsfx="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1270" 
+      Title="MainP">
+    <Page.Resources>
+        <Style x:Key="ButtonStyle"
+           TargetType="Button">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid>
+                            <Border x:Name="border"
+                                Background="#373E46"
+                                Height="45" CornerRadius="5"
+                                VerticalAlignment="Top">
+                                <ContentPresenter />
+                            </Border>
+
+                            <Image Source="/Assets/img/add_icon.png"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,5"
+                               Stretch="None" />
+
+                            <TextBlock Foreground="#E9EBED"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"
+                                   FontSize="28"
+                                   Text="إضافة"
+                                   FontFamily="Lato"
+                                   Margin="70,3,10,0" Height="45" />
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        <!--Button Style 2-->
+        <Style x:Key="ButtonStyle2"
+           TargetType="Button">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid>
+                            <Border x:Name="border"
+                                Background="#373E46"
+                                Height="45" CornerRadius="5"
+                                VerticalAlignment="Top">
+                                <ContentPresenter />
+                            </Border>
+
+                            <Image Source="/Assets/img/cancel_icon.png"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,5"
+                               Stretch="None" />
+
+                            <TextBlock Foreground="#E9EBED"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"
+                                   FontSize="25"
+                                   Text="إلغاء"
+                                   FontFamily="Lato"
+                                   Margin="70,6,10,0" Height="45" />
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+        <!--Button Style 3-->
+        <Style x:Key="ButtonStyle3"
+           TargetType="Button">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid>
+                            <Border x:Name="border"
+                                Background="#373E46"
+                                Height="90" CornerRadius="5"
+                                VerticalAlignment="Top">
+                                <ContentPresenter />
+                            </Border>
+
+                            <Image Source="/Assets/img/cancel_icon.png"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,5"
+                               Stretch="None" />
+
+                            <TextBlock Foreground="#E9EBED"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"
+                                   FontSize="25"
+                                   Text="إضافة مخرج"
+                                   FontFamily="Lato"
+                                   Margin="70,6,10,0" Height="45" />
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+    <!--Button 4-->
+        <Style x:Key="ButtonStyle4"
+           TargetType="Button">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid>
+                            <Border x:Name="border"
+                                Background="#373E46"
+                                Height="35" CornerRadius="5" 
+                                VerticalAlignment="Top">
+                                <ContentPresenter />
+                            </Border>
+
+                            <Image Source="/Assets/img/delete_icon24.png"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Bottom" 
+                               Margin="10,0,0,5"
+                               Stretch="None" />
+
+                            <TextBlock Foreground="#E9EBED"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"
+                                   FontSize="20"
+                                   Text="حذف"
+                                   FontFamily="Lato"
+                                   Margin="50,3,10,4" />
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+    </Page.Resources>
+    <Grid Background="#282D33">
+
+        <Button x:Name="AddBtn" HorizontalAlignment="Right" Margin="0,0,80,0" Height="100" Style="{StaticResource ResourceKey=ButtonStyle3}" Click="AddTaskButton_Click"/>
+
+
+        <ListView  x:Name="taskListView" HorizontalAlignment="Left"   ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Margin="0,0,0,0" d:ItemsSource="{d:SampleData ItemCount=6}"  Foreground="#FFFFDD00" FontSize="19" FontWeight="DemiBold"  >
+            <ListView.View  > 
+                <GridView >
+                    <GridViewColumn Header="حذف المهمة">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="Delete"  Style="{StaticResource ResourceKey=ButtonStyle4}" Click="Delete_Click"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="وقت الإيقاف" DisplayMemberBinding="{Binding EndDateTime}"  />
+                    <GridViewColumn Header="وقت التشغيل" DisplayMemberBinding="{Binding StartDateTime}" />
+                    <GridViewColumn Header="اسم المخرج" DisplayMemberBinding="{Binding ExitName}" />
+                    <GridViewColumn Header="اسم المحطة" DisplayMemberBinding="{Binding StationName}" />
+                    
+                    
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Popup x:Name="AddTaskPopup" IsOpen="False" StaysOpen="False" Placement="Center">
+            <Border x:Name="border" CornerRadius="5"
+                                            BorderBrush="#FF838383" Width="900" Height="300">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF4D4D4D" Offset="1"/>
+                        <GradientStop Color="#FF3F3E54" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,30,0,0" >
+                        <StackPanel Orientation="Horizontal" Margin="40,0,0,0" HorizontalAlignment="Center">
+
+                            <ComboBox x:Name="FilterByComboExit" Width="220" Height="40" VerticalAlignment="Center" SelectedIndex="0"  HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="White" FontFamily="Lato" FontWeight="DemiBold" FontSize="24"></ComboBox>
+                            <TextBlock Text=": اسم المخرج" Margin="0,0,0,0"  FontFamily="Lato" FontSize="30" VerticalAlignment="Center" Foreground="#FFDD00" FontWeight="Bold" />
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="40,0,0,0" HorizontalAlignment="Center">
+
+                            <ComboBox x:Name="FilterByCombo" Width="220" Height="40" VerticalAlignment="Center" SelectedIndex="0" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="White" FontFamily="Lato" FontWeight="DemiBold" FontSize="24" SelectionChanged="FilterByCombo_SelectionChanged"  ></ComboBox>
+                            <TextBlock Text=": اسم المحطة" Margin="0,0,0,0"  FontFamily="Lato" FontSize="30" VerticalAlignment="Center" Foreground="#FFDD00" FontWeight="Bold" />
+
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+
+                   
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="40,0,10,0" >
+                            <wpsfx:DateTimePicker  Margin="0,0,0,0" Height="42" HorizontalAlignment="Right" Name="endDate" Background="#373E46"  Foreground="White"
+                           VerticalAlignment="Center" Width="220" FontFamily="Lato" FormatString="MM/dd/yyyy HH:mm:ss" Format="Custom" FontWeight="Bold" FontSize="18"   TextAlignment="Center"  />
+                            <TextBlock Text=": وقت الإيقاف" Margin="12,0,0,0"  FontFamily="Lato" FontSize="27" VerticalAlignment="Center" Foreground="#FFDD00" FontWeight="Bold" />
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Margin="35,0,0,0">
+                            <wpsfx:DateTimePicker   Height="42"  Name="startDate"  Background="#373E46" Foreground="White"
+                                                            VerticalAlignment="Center" Width="220" FontFamily="Lato" FormatString="MM/dd/yyyy HH:mm:ss"   IsManipulationEnabled="True" FontWeight="Bold" FontSize="18" Format="Custom"  TextAlignment="Center" />
+                            <TextBlock Text=": وقت التشغيل" Margin="12,0,0,0"  FontFamily="Lato" FontSize="27" VerticalAlignment="Center" Foreground="#FFDD00" FontWeight="Bold" />
+
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,55,0,0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,50,0">
+
+                            <Button x:Name="closeBtn"  Style="{StaticResource ResourceKey=ButtonStyle2}" Click="CancelTaskButton_Click"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,50,0">
+
+                            <Button x:Name="enterBtn"  Style="{StaticResource ResourceKey=ButtonStyle}" Click="enterBtn_Click"/>
+                        </StackPanel>
+
+    
+                        </StackPanel>
+                    </StackPanel>
+                    </Border>
+            
+        </Popup>
+
+        <materialDesign:Snackbar  x:Name="SnackbarFive"  Message="..........خطأ في الإتصال"  Width="600" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="#FFED7147" Foreground="White" FontFamily="Segoe UI Black" FontSize="32" FontWeight="Bold"  />
+
+    </Grid>
+</Page>

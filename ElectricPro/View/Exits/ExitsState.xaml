@@ -1,0 +1,194 @@
+﻿<Page x:Class="ElectricPro.View.Exits.ExitsState"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ElectricPro.View.Exits"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:wpsfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1270" 
+      Title="MainP">
+    <Page.Resources>
+        <Style x:Key="ButtonStyle"
+           TargetType="Button">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid>
+                            <Border x:Name="border"
+                                Background="#373E46"
+                                Height="45" CornerRadius="5"
+                                VerticalAlignment="Top">
+                                <ContentPresenter />
+                            </Border>
+
+                            <Image Source="/Assets/img/search_img.png"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="10,-2,0,0"
+                               Stretch="None" />
+
+                            <TextBlock Foreground="#E9EBED"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"
+                                   FontSize="28"
+                                   Text="بحث"
+                                   FontFamily="Lato"
+                                   Margin="70,3,10,0" Height="45" />
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        <!--Button Style 2-->
+        <Style x:Key="ButtonStyle2"
+           TargetType="Button">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid>
+                            <Border x:Name="border"
+                                Background="#373E46"
+                                Height="45" CornerRadius="5"
+                                VerticalAlignment="Top">
+                                <ContentPresenter />
+                            </Border>
+
+                            <Image Source="/Assets/img/print_img.png"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="10,-2,0,0"
+                               Stretch="None" />
+
+                            <TextBlock Foreground="#E9EBED"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"
+                                   FontSize="25"
+                                   Text="طباعة"
+                                   FontFamily="Lato"
+                                   Margin="70,6,10,0" Height="45" />
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                 Value="True">
+                                <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#292F34" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+    </Page.Resources>
+    <Grid Background="#282D33">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--Filter-->
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="0,0,20,0" HorizontalAlignment="Right"/>
+
+
+        </Grid>
+        <!--  /  Filter-->
+
+        <Grid Grid.Row="1" />
+
+        <!--Row 1-->
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,20,0">
+            <wpsfx:DateTimePicker  Margin="0,0,12,0" Height="42"  Name="startDate"  Background="#373E46" Foreground="White"
+                                                            VerticalAlignment="Center" Width="250" FontFamily="Lato" FormatString="MM/dd/yyyy HH:mm:ss"   IsManipulationEnabled="True" FontWeight="Bold" FontSize="21" Format="Custom"  TextAlignment="Center" />
+            <TextBlock Text=": من" Margin="0,0,0,0"  FontFamily="Lato" FontSize="30" VerticalAlignment="Center" Foreground="#FFDD00" FontWeight="Bold" />
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="250,0,0,0">
+            <wpsfx:DateTimePicker  Margin="0,0,12,0" Height="42" HorizontalAlignment="Right" Name="endDate" Background="#373E46"  Foreground="White"
+    VerticalAlignment="Center" Width="250" FontFamily="Lato" FormatString="MM/dd/yyyy HH:mm:ss" Format="Custom" FontWeight="Bold" FontSize="21"   TextAlignment="Center"  />
+            <TextBlock Text=": إلى" Margin="0,0,0,0"  FontFamily="Lato" FontSize="30" VerticalAlignment="Center" Foreground="#FFDD00" FontWeight="Bold" />
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left" Margin="465,0,0,0">
+            <Button x:Name="enterBtn"  VerticalAlignment="Center" Style="{StaticResource ResourceKey=ButtonStyle}" Click="enterBtn_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left" Margin="270,3,0,0"/>
+        <Grid Grid.Row="1" Width="230" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,6,0,0"/>
+
+
+        <DataGrid x:Name="dataGrid" Margin="10,0,10,8" Background="#373E46" 
+                    AutoGenerateColumns="False"
+                    CanUserAddRows="False" 
+                    CanUserDeleteRows="False"  FontSize="18" Foreground="#FFFFDD00"
+                   HorizontalScrollBarVisibility="Visible" 
+                     IsReadOnly="True" Grid.Row="2" >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="آخر تحديث" MinWidth="50" Width="*" Binding="{Binding LastUpdate}"  FontSize="20" FontWeight="DemiBold"
+                            />
+                <DataGridTextColumn Header="وقت التشغيل" MinWidth="50" Width="*" Binding="{Binding StartTime}"  FontSize="20" FontWeight="DemiBold"
+                            />
+                <DataGridTextColumn Header="مدة التشغيل" MinWidth="50" Width="*" Binding="{Binding OnTime}"  FontSize="20" FontWeight="DemiBold"
+                            />
+
+                <DataGridTextColumn   Header="الأمبير" MinWidth="50" Width="*" Binding="{Binding Amper}"  FontSize="20" FontWeight="DemiBold"
+                            />
+                <DataGridTextColumn Header="الحالة" MinWidth="50" Width="*" Binding="{Binding State}"  FontSize="20" FontWeight="DemiBold"
+                            />
+                <DataGridTextColumn Header="اسم المخرج" MinWidth="50" Width="*" Binding="{Binding Exit}"  FontSize="20" FontWeight="DemiBold"
+                            />
+                <DataGridTextColumn Header="اسم المحطة" MinWidth="50" Width="*" Binding="{Binding Station}"  FontSize="20" FontWeight="DemiBold"
+                            />
+
+              
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>
